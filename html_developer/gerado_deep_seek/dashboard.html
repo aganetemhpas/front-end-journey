@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Controle de Acesso</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/logo.svg" alt="Logo" class="sidebar-logo">
+                <h2>Controle de Acesso</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cadastros.html">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Cadastros</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span>Visitantes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-car"></i>
+                            <span>Veículos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-cog"></i>
+                            <span>Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://via.placeholder.com/40" alt="Usuário" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">Admin</span>
+                        <span class="user-role">Administrador</span>
+                    </div>
+                    <a href="#" class="logout-btn" title="Sair">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <h1>Dashboard</h1>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Pesquisar...">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <button class="btn btn-primary">
+                        <i class="fas fa-plus"></i> Novo Registro
+                    </button>
+                </div>
+            </header>
+            
+            <div class="content-wrapper">
+                <!-- Stats Cards -->
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-icon bg-blue">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Entradas Hoje</h3>
+                            <p>124</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon bg-green">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Saídas Hoje</h3>
+                            <p>98</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon bg-orange">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Veículos no Local</h3>
+                            <p>42</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon bg-red">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Registros Irregulares</h3>
+                            <p>5</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Activity -->
+                <div class="activity-section">
+                    <div class="section-header">
+                        <h2>Últimos Registros</h2>
+                        <a href="#" class="view-all">Ver todos</a>
+                    </div>
+                    
+                    <div class="activity-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Documento</th>
+                                    <th>Veículo</th>
+                                    <th>Tipo</th>
+                                    <th>Horário</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/30" alt="User">
+                                            <span>João Silva</span>
+                                        </div>
+                                    </td>
+                                    <td>123.456.789-00</td>
+                                    <td>ABC-1234</td>
+                                    <td>Visitante</td>
+                                    <td>10:25 AM</td>
+                                    <td><span class="badge badge-success">Entrada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/30" alt="User">
+                                            <span>Maria Souza</span>
+                                        </div>
+                                    </td>
+                                    <td>987.654.321-00</td>
+                                    <td>XYZ-5678</td>
+                                    <td>Funcionário</td>
+                                    <td>10:18 AM</td>
+                                    <td><span class="badge badge-danger">Saída</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/30" alt="User">
+                                            <span>Carlos Oliveira</span>
+                                        </div>
+                                    </td>
+                                    <td>456.789.123-00</td>
+                                    <td>DEF-9012</td>
+                                    <td>Fornecedor</td>
+                                    <td>09:45 AM</td>
+                                    <td><span class="badge badge-success">Entrada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/30" alt="User">
+                                            <span>Ana Costa</span>
+                                        </div>
+                                    </td>
+                                    <td>321.654.987-00</td>
+                                    <td>GHI-3456</td>
+                                    <td>Visitante</td>
+                                    <td>09:30 AM</td>
+                                    <td><span class="badge badge-success">Entrada</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <img src="https://via.placeholder.com/30" alt="User">
+                                            <td>Pedro Santos</td>
+                                        </div>
+                                    </td>
+                                    <td>789.123.456-00</td>
+                                    <td>JKL-7890</td>
+                                    <td>Funcionário</td>
+                                    <td>08:55 AM</td>
+                                    <td><span class="badge badge-danger">Saída</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Charts Section -->
+                <div class="charts-row">
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Movimentação Diária</h3>
+                            <div class="chart-actions">
+                                <select>
+                                    <option>Últimos 7 dias</option>
+                                    <option>Últimos 15 dias</option>
+                                    <option>Últimos 30 dias</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="dailyChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <h3>Tipos de Visitantes</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="visitorTypesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
