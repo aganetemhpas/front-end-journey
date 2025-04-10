@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário Pokémon</title>
+</head>
+<body>
+
+    <h1>Cadastro de Treinador Pokémon</h1>
+
+    <form action="#" method="post">
+
+        <!-- Input de texto -->
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br><br>
+
+        <!-- Input de e-mail -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Radio button -->
+        <p>Escolha seu time:</p>
+        <input type="radio" id="valor" name="time" value="valor">
+        <label for="valor">Time Valor</label><br>
+        <input type="radio" id="mystic" name="time" value="mystic">
+        <label for="mystic">Time Mystic</label><br>
+        <input type="radio" id="instinct" name="time" value="instinct">
+        <label for="instinct">Time Instinct</label><br><br>
+
+        <!-- Checkbox -->
+        <p>Quais Pokémons você já capturou?</p>
+        <input type="checkbox" id="charmander" name="pokemon" value="Charmander">
+        <label for="charmander">Charmander</label><br>
+        <input type="checkbox" id="squirtle" name="pokemon" value="Squirtle">
+        <label for="squirtle">Squirtle</label><br>
+        <input type="checkbox" id="bulbasaur" name="pokemon" value="Bulbasaur">
+        <label for="bulbasaur">Bulbasaur</label><br><br>
+
+        <!-- Select -->
+        <label for="regiao">Região favorita:</label>
+        <select id="regiao" name="regiao">
+            <option value="kanto">Kanto</option>
+            <option value="johto">Johto</option>
+            <option value="hoenn">Hoenn</option>
+        </select><br><br>
+
+        <!-- Textarea -->
+        <label for="comentarios">Comentários:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="40" placeholder="Escreva algo aqui..."></textarea><br><br>
+
+        <!-- Botão -->
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
