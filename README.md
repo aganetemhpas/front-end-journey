@@ -1,5 +1,5 @@
 
-# 🌐 Front-End Development Journey - # 🚧 Under Construction 🚧
+# 🌐 Front-End Development Journey -  🚧 Under Construction 🚧
 
 Welcome to my **Front-End Journey**! This repository is a collection of my learning, practice projects, and experiments as I explore the world of **HTML**, **CSS**, and **JavaScript**.
 
