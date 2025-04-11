@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Diferença entre embed e iframe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      gap: 40px;
+    }
+    iframe, embed {
+      border: 2px solid #888;
+      width: 400px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo: Embed vs Iframe</h1>
+  <div class="container">
+    
+    <!-- EMBED: usado para mostrar conteúdo como PDF, SVG, vídeos -->
+    <div>
+      <h2>&lt;embed&gt; - PDF</h2>
+      <embed src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" 
+             type="application/pdf" />
+      <!-- Embeds não permitem muita interação ou comunicação com JS -->
+    </div>
+
+    <!-- IFRAME: usado para incorporar uma página web completa -->
+    <div>
+      <h2>&lt;iframe&gt; - Página HTML</h2>
+      <iframe src="https://dio.me"></iframe>
+      <!-- Iframes permitem scripts, interação e comunicação entre janelas -->
+    </div>
+
+  </div>
+</body>
+</html>
