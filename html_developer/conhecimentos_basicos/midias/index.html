@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Tags HTML</title>
+</head>
+<body>
+    <h1>Exemplos das tags da imagem</h1>
+
+    <!-- Tag <img> - Usada para incorporar imagens em uma página HTML -->
+    <section>
+        <h2>Tag &lt;img&gt;</h2>
+        <p>Exemplo de imagem incorporada:</p>
+        <img src="exemplo.jpg" alt="Imagem de exemplo" width="300">
+        <!-- 
+            Atributos importantes:
+            src - caminho para a imagem
+            alt - texto alternativo para acessibilidade
+            width/height - dimensões da imagem
+        -->
+    </section>
+
+    <!-- Tag <audio> - Usada para incorporar conteúdo de áudio -->
+    <section>
+        <h2>Tag &lt;audio&gt;</h2>
+        <p>Exemplo de player de áudio:</p>
+        <audio controls>
+            <source src="musica.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <!-- 
+            Atributo 'controls' mostra os controles de play/pause/volume
+            Pode conter múltiplos <source> para diferentes formatos
+        -->
+    </section>
+
+    <!-- Tag <video> - Usada para incorporar vídeos -->
+    <section>
+        <h2>Tag &lt;video&gt;</h2>
+        <p>Exemplo de player de vídeo:</p>
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <!-- 
+            Similar ao <audio>, mas para vídeos
+            Pode especificar largura e altura
+        -->
+    </section>
+
+    <!-- Tag <track> - Usada para legendas ou descrições de texto em vídeos -->
+    <section>
+        <h2>Tag &lt;track&gt;</h2>
+        <p>Exemplo de vídeo com legenda:</p>
+        <video width="320" height="240" controls>
+            <source src="video-com-legenda.mp4" type="video/mp4">
+            <track src="legenda.vtt" kind="subtitles" srclang="pt" label="Português">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+        <!-- 
+            Usada dentro de <video> ou <audio>
+            kind="subtitles" para legendas
+            srclang - idioma da legenda
+            label - rótulo para o usuário
+        -->
+    </section>
+
+    <!-- Tag <iframe> - Usada para incorporar outro documento HTML -->
+    <section>
+        <h2>Tag &lt;iframe&gt;</h2>
+        <p>Exemplo de incorporação de mapa:</p>
+        <iframe 
+            src="https://www.google.com/maps/embed" 
+            width="600" 
+            height="450" 
+            frameborder="0" 
+            style="border:0" 
+            allowfullscreen>
+        </iframe>
+        <!-- 
+            Usada para incorporar conteúdo externo
+            Pode ser usado para mapas, vídeos do YouTube, etc.
+            Atributos width/height controlam o tamanho
+        -->
+    </section>
+</body>
+</html>
