@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Médica - Horários</title>
+    <link rel="stylesheet" href="template.html">
+    <style>
+        .header {
+            background-image: url('https://img.freepik.com/free-photo/doctor-with-stethoscope-hands-hospital-background_1423-1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .header-overlay {
+            background-color: rgba(46, 125, 50, 0.7);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .header h1 {
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html">Página Principal</a>
+        <a href="sobre.html">Sobre a clínica</a>
+        <a href="horarios.html">Horário de Atendimento</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <header class="header">
+        <div class="header-overlay">
+            <h1>Horários de Atendimento</h1>
+        </div>
+    </header>
+
+    <main class="content">
+        <h2>Horários de Funcionamento</h2>
+        <p>Confira abaixo os horários de atendimento de cada especialidade:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Serviços</th>
+                    <th>Segunda a Sexta</th>
+                    <th>Sábados</th>
+                    <th>Feriados</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Clínica geral</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 14h</td>
+                    <td>08h - 14h</td>
+                </tr>
+                <tr>
+                    <td>Psicologia</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 14h</td>
+                    <td>08h - 14h</td>
+                </tr>
+                <tr>
+                    <td>Pediatria</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 18h</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Oftalmologia</td>
+                    <td>08h - 19h</td>
+                    <td>08h - 18h</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Observações importantes:</h3>
+        <ul>
+            <li>Consultas devem ser agendadas com antecedência</li>
+            <li>Em caso de emergência, atendemos 24 horas</li>
+            <li>Chegue 15 minutos antes do horário marcado</li>
+            <li>Traga seus exames anteriores, se houver</li>
+        </ul>
+    </main>
+
+    <footer class="footer">
+        <p>Clínica Médica - Telefone: (11) 1234-5678</p>
+        <p>Endereço: Rua da Saúde, 123 - São Paulo/SP</p>
+    </footer>
+</body>
+</html> 

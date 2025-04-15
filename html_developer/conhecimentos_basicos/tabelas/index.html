@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Tabela HTML</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f8f8f8;
+      text-align: center; /* Alinha o conteúdo da página ao centro */
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    table {
+      border-collapse: collapse; /* Simula cellspacing = 0 */
+      width: 60%;
+      margin: 20px auto;
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      /* Simula cellpadding com padding nas células */
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px; /* Equivale ao atributo cellpadding */
+      text-align: left;
+    }
+
+    thead {
+      background-color: #333;
+      color: white;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    tfoot {
+      background-color: #e0e0e0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tabela de Produtos</h2>
+
+  <!-- 
+    summary: fornece uma descrição da tabela para tecnologias assistivas.
+    OBS: o atributo 'summary' foi descontinuado em HTML5, mas pode ser usado para acessibilidade.
+  -->
+  <table summary="Tabela com a lista de produtos, suas quantidades e preços totais.">
+
+    <!-- 
+      <thead>: define o cabeçalho da tabela. 
+      Muito útil para organizar e estilizar o cabeçalho.
+    -->
+    <thead>
+      <tr>
+        <!-- 
+          <th>: cria células de cabeçalho. Por padrão, são em negrito e centralizadas.
+        -->
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Preço</th>
+      </tr>
+    </thead>
+
+    <!-- 
+      <tbody>: agrupa o corpo principal da tabela (os dados).
+    -->
+    <tbody>
+      <tr>
+        <td>Teclado</td>
+        <td>2</td>
+        <td>R$ 100</td>
+      </tr>
+      <tr>
+        <td>Mouse</td>
+        <td>3</td>
+        <td>R$ 50</td>
+      </tr>
+      <tr>
+        <td>Monitor</td>
+        <td>1</td>
+        <td>R$ 700</td>
+      </tr>
+    </tbody>
+
+    <!-- 
+      <tfoot>: define o rodapé da tabela.
+      É geralmente usado para totais ou observações finais.
+    -->
+    <tfoot>
+      <tr>
+        <!-- 
+          colspan="2": faz com que essa célula ocupe duas colunas.
+          Muito útil para mesclar células horizontalmente.
+        -->
+        <td colspan="2" align="center">Total</td> <!-- align="center": centraliza o texto da célula -->
+        <td>R$ 900</td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+</body>
+</html>
