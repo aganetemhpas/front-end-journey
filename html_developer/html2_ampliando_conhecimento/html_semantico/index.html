@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo HTML Semântico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #343a40;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #e83e8c;
+      padding: 1em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: #e83e8c;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background-color: #fff;
+      padding: 1em;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #e83e8c;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #e83e8c;
+      margin: 1em;
+      padding-left: 1em;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figcaption {
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Resumo HTML Semântico</h1>
+  </header>
+
+  <nav>
+    <a href="#main-header-footer">Main, Header e Footer</a>
+    <a href="#aside-section-nav">Aside, Section e Nav</a>
+    <a href="#article-blockquote-q">Article, Blockquote e Q</a>
+    <a href="#figure-figcaption-picture">Figure, Figcaption e Picture</a>
+  </nav>
+
+  <main>
+    <section id="main-header-footer">
+      <h2>Main, Header e Footer</h2>
+      <p>Estas tags estruturam a página. <code>&lt;header&gt;</code> contém o cabeçalho, <code>&lt;main&gt;</code> o conteúdo principal, e <code>&lt;footer&gt;</code> o rodapé.</p>
+    </section>
+
+    <section id="aside-section-nav">
+      <h2>Aside, Section e Nav</h2>
+      <p><code>&lt;section&gt;</code> representa uma seção de conteúdo, <code>&lt;aside&gt;</code> conteúdo lateral ou complementar, e <code>&lt;nav&gt;</code> links de navegação.</p>
+    </section>
+
+    <section id="article-blockquote-q">
+      <h2>Article, Blockquote e Q</h2>
+      <p><code>&lt;article&gt;</code> representa um conteúdo independente, <code>&lt;blockquote&gt;</code> é usado para citações em bloco e <code>&lt;q&gt;</code> para citações curtas.</p>
+      <blockquote>
+        "Ser ou não ser, eis a questão."
+      </blockquote>
+    </section>
+
+    <section id="figure-figcaption-picture">
+      <h2>Figure, Figcaption e Picture</h2>
+      <figure>
+        <img src="https://via.placeholder.com/300x150" alt="Imagem exemplo">
+        <figcaption>Exemplo de imagem com legenda usando &lt;figure&gt; e &lt;figcaption&gt;.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - HTML Semântico com Estilo</p>
+  </footer>
+</body>
+
+</html>
