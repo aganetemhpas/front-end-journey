@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenho com Canvas</title>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f0f0f0; }
+        canvas { border: 1px solid #333; background-color: #fff; cursor: crosshair; }
+        .controls { position: absolute; top: 20px; left: 20px; background-color: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        label { display: block; margin-bottom: 5px; }
+        input[type="color"], input[type="range"] { width: 100px; }
+        button { margin-top: 10px; padding: 8px 15px; border: none; border-radius: 3px; background-color: #007bff; color: white; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <canvas id="meuCanvas" width="500" height="300"></canvas>
+
+    <div class="controls">
+        <label for="strokeStyle">Cor da Linha:</label>
+        <input type="color" id="strokeStyle" value="#000000">
+
+        <label for="lineWidth">Espessura da Linha:</label>
+        <input type="range" id="lineWidth" min="1" max="10" value="2">
+        <span id="lineWidthValue">2</span>
+
+        <button id="clearCanvas">Limpar Canvas</button>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('meuCanvas');
+        const ctx = canvas.getContext('2d');
+        const colorInput = document.getElementById('strokeStyle');
+        const lineWidthInput = document.getElementById('lineWidth');
+        const lineWidthValueSpan = document.getElementById('lineWidthValue');
+        const clearButton = document.getElementById('clearCanvas');
+
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        function draw(e) {
+            if (!isDrawing) return; // Para a função se não estiver desenhando
+            ctx.strokeStyle = colorInput.value;
+            ctx.lineWidth = lineWidthInput.value;
+            ctx.lineCap = 'round'; // Deixa as pontas das linhas arredondadas
+
+            ctx.beginPath();
+            // Começa de
+            ctx.moveTo(lastX, lastY);
+            // Vai para
+            ctx.lineTo(e.offsetX, e.offsetY);
+            ctx.stroke();
+            // Atualiza as últimas posições
+            lastX = e.offsetX;
+            lastY = e.offsetY;
+        }
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            lastX = e.offsetX;
+            lastY = e.offsetY;
+        });
+
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+        canvas.addEventListener('mouseout', () => isDrawing = false);
+
+        lineWidthInput.addEventListener('input', () => {
+            lineWidthValueSpan.textContent = lineWidthInput.value;
+        });
+
+        clearButton.addEventListener('click', () => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        });
+    </script>
+</body>
+</html>

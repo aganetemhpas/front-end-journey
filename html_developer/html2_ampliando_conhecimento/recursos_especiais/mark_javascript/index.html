@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar e Destacar Palavras</title>
+  <style>
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 300px;
+    }
+    mark {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Busque uma palavra no texto</h2>
+
+  <input type="text" id="busca" placeholder="Digite a palavra" oninput="realizaBusca()">
+
+  <p id="descricao">
+    O HTML é a linguagem de marcação usada para criar páginas web. Combinado com CSS e JavaScript, permite o desenvolvimento de sites interativos e modernos.
+  </p>
+
+  <script>
+    const input = document.getElementById('busca');
+    const descriptionObject = document.getElementById('descricao');
+    const textoOriginal = descriptionObject.textContent;
+
+    function realizaBusca() {
+      const busca = input.value.trim();
+      if (busca === "") {
+        descriptionObject.innerHTML = textoOriginal;
+        return;
+      }
+
+      const regex = new RegExp(`(${busca})`, 'gi');
+      const textoMarcado = textoOriginal.replace(regex, '<mark>$1</mark>');
+      descriptionObject.innerHTML = textoMarcado;
+    }
+  </script>
+
+</body>
+</html>
