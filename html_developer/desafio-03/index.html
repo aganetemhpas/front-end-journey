@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wikipedia Moderna - Itália</title>
+  <style>
+    :root {
+      --primary: #3366cc;
+      --bg: #f9fafb;
+      --text: #202122;
+      --gray: #6c757d;
+      --card: #ffffff;
+      --accent: #008000;
+      --sidebar-width: 280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--card);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-area img {
+      height: 40px;
+      width: 40px;
+      margin-right: 0.5rem;
+    }
+
+    header h1 {
+      font-size: 1.4rem;
+      color: var(--primary);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--gray);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      color: var(--primary);
+      outline: none;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 2rem auto;
+      gap: 2rem;
+      padding: 0 1rem;
+    }
+
+    aside {
+      flex: 0 0 var(--sidebar-width);
+      background-color: var(--card);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      height: fit-content;
+    }
+
+    .info-box {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .info-box-header {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .info-box-content {
+      padding: 1rem;
+    }
+
+    .info-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .info-item {
+      margin: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .map-container {
+      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      border: none;
+    }
+
+    main {
+      flex: 1;
+      background-color: var(--card);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    article h2 {
+      color: var(--accent);
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    article h3 {
+      color: var(--text);
+      margin: 1.5rem 0 1rem;
+    }
+
+    article p {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
+
+    .section-nav {
+      background-color: var(--bg);
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    .section-nav h3 {
+      margin-top: 0;
+    }
+
+    .section-nav ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .section-nav a {
+      color: var(--primary);
+      text-decoration: none;
+      line-height: 1.8;
+    }
+
+    .regions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .region-card {
+      background: var(--bg);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .region-card h4 {
+      color: var(--primary);
+      margin: 0 0 0.5rem 0;
+    }
+
+    .geography-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--gray);
+      font-size: 0.9rem;
+      background-color: var(--card);
+      margin-top: 2rem;
+      box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-direction: column;
+      }
+
+      aside {
+        flex: none;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      nav a {
+        margin: 0.5rem 1rem 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="header-content">
+      <div class="logo-area">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2.svg/64px-Wikipedia-logo-v2.svg.png" alt="Logo da Wikipedia" />
+        <h1>Wikipedia Moderna</h1>
+      </div>
+      <nav role="navigation" aria-label="Menu principal">
+        <a href="#">Início</a>
+        <a href="#">Artigos</a>
+        <a href="#">Temas</a>
+        <a href="#">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside role="complementary">
+      <div class="info-box">
+        <div class="info-box-header">
+          República Italiana
+        </div>
+        <div class="info-box-content">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg" alt="Bandeira da Itália" />
+          <div class="info-item">
+            <strong>Capital:</strong>
+            <span>Roma</span>
+          </div>
+          <div class="info-item">
+            <strong>Língua oficial:</strong>
+            <span>Italiano</span>
+          </div>
+          <div class="info-item">
+            <strong>Governo:</strong>
+            <span>República parlamentarista</span>
+          </div>
+          <div class="info-item">
+            <strong>Área total:</strong>
+            <span>301.340 km²</span>
+          </div>
+          <div class="info-item">
+            <strong>População:</strong>
+            <span>60,36 milhões (2021)</span>
+          </div>
+          <div class="info-item">
+            <strong>Moeda:</strong>
+            <span>Euro (€)</span>
+          </div>
+        </div>
+      </div>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5913694.080132624!2d7.5015614086315915!3d41.29495171826684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4fe82448dd203%3A0xe22cf55c24635e6f!2sIt%C3%A1lia!5e0!3m2!1spt-BR!2sbr!4v1710795435044!5m2!1spt-BR!2sbr"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </aside>
+
+    <main role="main">
+      <article aria-labelledby="tema-italia">
+        <div class="section-nav">
+          <h3>Índice</h3>
+          <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#historia">História</a></li>
+            <li><a href="#geografia">Geografia</a></li>
+            <li><a href="#cultura">Cultura</a></li>
+          </ul>
+        </div>
+
+        <h2 id="introducao">Itália</h2>
+        <p>
+          A <strong>Itália</strong> (em italiano: Italia), oficialmente República Italiana (em italiano: Repubblica Italiana), é um país localizado no sul da Europa. Composta por uma península banhada pelo mar Mediterrâneo e diversas ilhas, como a Sicília e a Sardenha, a Itália é conhecida por sua rica herança histórica, cultural e artística.
+        </p>
+
+        <h2 id="historia">História</h2>
+        <p>
+          A história da Itália é fundamental para a civilização ocidental. O território italiano foi berço do Império Romano, uma das maiores civilizações da antiguidade, que deixou um legado duradouro em áreas como direito, arte, arquitetura, engenharia e língua. Durante o Renascimento, a Itália foi o centro de uma revolução cultural que transformou a arte, a ciência e o pensamento europeu.
+        </p>
+
+        <h2 id="geografia">Geografia</h2>
+        <p>
+          A Itália está localizada no sul da Europa, ocupando a península Itálica e várias ilhas no Mar Mediterrâneo. O país faz fronteira com França, Suíça, Áustria e Eslovênia. Seu território inclui dois estados independentes: Cidade do Vaticano e San Marino. O país é conhecido por sua geografia diversificada, que inclui os Alpes ao norte e o vulcão ativo Monte Etna na Sicília.
+        </p>
+        
+        <img 
+          src="./Mapa_regioes_italianas.jpg" 
+          alt="Mapa político da Itália mostrando suas regiões"
+          class="geography-image"
+        />
+
+        <h3>Principais Regiões e suas Capitais</h3>
+        <div class="regions-grid">
+          <div class="region-card">
+            <h4>Lombardia</h4>
+            <p>Capital: Milão</p>
+            <small>Maior região econômica da Itália</small>
+          </div>
+          
+          <div class="region-card">
+            <h4>Lácio</h4>
+            <p>Capital: Roma</p>
+            <small>Sede da capital nacional</small>
+          </div>
+          
+          <div class="region-card">
+            <h4>Toscana</h4>
+            <p>Capital: Florença</p>
+            <small>Centro histórico e cultural</small>
+          </div>
+          
+          <div class="region-card">
+            <h4>Campânia</h4>
+            <p>Capital: Nápoles</p>
+            <small>Região do Monte Vesúvio</small>
+          </div>
+          
+          <div class="region-card">
+            <h4>Sicília</h4>
+            <p>Capital: Palermo</p>
+            <small>Maior ilha do Mediterrâneo</small>
+          </div>
+          
+          <div class="region-card">
+            <h4>Vêneto</h4>
+            <p>Capital: Veneza</p>
+            <small>Região dos canais famosos</small>
+          </div>
+          
+          <div class="region-card">
+            <h4>Piemonte</h4>
+            <p>Capital: Turim</p>
+            <small>Região dos Alpes italianos</small>
+          </div>
+          
+          <div class="region-card">
+            <h4>Emília-Romanha</h4>
+            <p>Capital: Bolonha</p>
+            <small>Centro gastronômico italiano</small>
+          </div>
+        </div>
+
+        <h2 id="cultura">Cultura</h2>
+        <p>
+          A cultura italiana exerceu uma influência profunda no desenvolvimento da arte, música, arquitetura, literatura, ciência e moda globais. O país é mundialmente reconhecido por sua gastronomia, com pratos como pizza e massa, seu café, vinhos e design. A Itália possui o maior número de locais considerados Patrimônio Mundial pela UNESCO, refletindo sua extraordinária riqueza histórica e cultural.
+        </p>
+      </article>
+    </main>
+  </div>
+
+  <footer role="contentinfo">
+    <p>© 2025 Wikipedia Moderna — Conteúdo adaptado de <a href="https://pt.wikipedia.org/wiki/It%C3%A1lia" target="_blank">Wikipedia: Itália</a>.</p>
+  </footer>
+</body>
+</html> 
