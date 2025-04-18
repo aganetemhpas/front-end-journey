@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dimensionamento e Espaçamento</title>
+  <style>
+    /*
+      Largura e Altura:
+      Define o tamanho do elemento.
+      width = largura, height = altura.
+    */
+    .caixa1 {
+      width: 200px;
+      height: 100px;
+      background-color: lightcoral;
+    }
+
+    /*
+      Altura e Largura Máxima e Mínima:
+      Define limites de tamanho. O elemento não passará desses valores.
+      Útil para manter o layout adaptável.
+    */
+    .caixa2 {
+      min-width: 100px;
+      max-width: 300px;
+      min-height: 50px;
+      max-height: 150px;
+      background-color: lightblue;
+    }
+
+    /*
+      Margin:
+      Espaço externo ao redor do elemento.
+      Pode ser usado para afastar elementos entre si.
+    */
+    .caixa3 {
+      margin: 20px;
+      background-color: lightgreen;
+      width: 150px;
+      height: 80px;
+    }
+
+    /*
+      Padding:
+      Espaço interno entre o conteúdo e a borda do elemento.
+      Útil para "dar respiro" ao conteúdo interno.
+    */
+    .caixa4 {
+      padding: 20px;
+      background-color: khaki;
+      width: 150px;
+      height: 80px;
+    }
+
+    /*
+      Box Sizing:
+      Define como o navegador deve calcular o tamanho total do elemento.
+      border-box = inclui padding e borda no cálculo da largura e altura.
+    */
+    .caixa5 {
+      box-sizing: border-box;
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 5px solid black;
+      background-color: thistle;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Exemplos de Propriedades de Dimensionamento e Espaçamento</h2>
+
+  <div class="caixa1">Largura e Altura</div>
+  <div class="caixa2">Mínima e Máxima</div>
+  <div class="caixa3">Margin</div>
+  <div class="caixa4">Padding</div>
+  <div class="caixa5">Box Sizing</div>
+
+</body>
+</html>

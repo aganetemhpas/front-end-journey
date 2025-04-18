@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Combinadores CSS</title>
+  <style>
+    /*
+      Agrupamento de Seletores:
+      Permite aplicar o mesmo estilo a vários seletores diferentes de uma vez só.
+      Aqui, estamos aplicando cor vermelha tanto aos <h1> quanto aos <h2>.
+    */
+    h1, h2 {
+      color: red;
+    }
+
+    /*
+      Combinador Descendente (espaço):
+      Aplica o estilo a todos os <span> que estão dentro de um <div>, em qualquer nível.
+    */
+    div span {
+      font-weight: bold;
+    }
+
+    /*
+      Combinador Filho (>): 
+      Aplica o estilo apenas aos elementos que são filhos diretos de outro.
+      Aqui, apenas <p> que estão diretamente dentro de <section> receberão o estilo.
+    */
+    section > p {
+      background-color: lightblue;
+    }
+
+    /*
+      Combinador Irmão Adjacente (+):
+      Aplica o estilo ao elemento que vem **logo depois** de outro, como irmão direto.
+      Aqui, o <p> que vem imediatamente após um <h3> será verde.
+    */
+    h3 + p {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Título Principal</h1>
+  <h2>Subtítulo</h2>
+
+  <div>
+    <p>Texto dentro da div</p>
+    <span>Span dentro da div (descendente)</span>
+  </div>
+
+  <section>
+    <p>Parágrafo filho direto da section</p>
+    <div>
+      <p>Parágrafo aninhado (não é filho direto)</p>
+    </div>
+  </section>
+
+  <h3>Seção</h3>
+  <p>Parágrafo logo após o h3 (irmão adjacente)</p>
+
+  <p>Outro parágrafo (não será afetado pelo combinador +)</p>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo de Seletores CSS</title>
+  <style>
+    /* 
+      Seletor de Tags:
+      Aplica o estilo a todos os elementos <p> da página.
+      Aqui, estamos deixando os parágrafos com cor azul.
+    */
+    p {
+      color: blue;
+    }
+
+    /* 
+      Seletor de ID:
+      Aplica o estilo ao elemento com id="menu".
+      IDs são únicos e devem ser usados em um único elemento na página.
+    */
+    #menu {
+      background-color: black;
+      color: white;
+      padding: 10px;
+    }
+
+    /* 
+      Seletor de Classes:
+      Aplica o estilo a todos os elementos com a classe "card".
+      Classes podem ser reutilizadas em vários elementos.
+    */
+    .card {
+      border: 1px solid gray;
+      padding: 10px;
+      margin: 10px 0;
+      text-transform: uppercase;
+    
+    }
+
+    /* 
+      Seletor Universal:
+      Aplica o estilo a todos os elementos da página.
+      Aqui, definimos uma fonte padrão para todo o conteúdo.
+    */
+    * {
+      font-family: Arial, sans-serif;
+    }
+
+    /* 
+      Seletor de Atributo:
+      Aplica o estilo apenas aos inputs que possuem type="text".
+      Muito útil para customizar elementos com atributos específicos.
+    */
+    input[type="text"] {
+      border: 2px solid green;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="menu">Menu Principal</div>
+
+  <p>Este parágrafo está usando o seletor de tag.</p>
+
+  <div class="card">
+    Este bloco usa a classe "card" e está estilizado com borda.
+  </div>
+
+  <input type="text" placeholder="Digite algo...">
+  <input type="password" placeholder="Senha">
+
+</body>
+</html>
