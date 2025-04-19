@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Background CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+            color: #2c3e50;
+        }
+        
+        .example {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            position: relative;
+        }
+        
+        .example-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 8px;
+        }
+        
+        .code {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            z-index: 3;
+        }
+        
+        /* Exemplo 1: Background com Imagem */
+        .bg-image {
+            background-image: url('https://source.unsplash.com/random/1600x900?nature');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Exemplo 2: Background com Gradiente Linear */
+        .bg-gradient-linear {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        /* Exemplo 3: Imagem com Overlay */
+        .bg-image-overlay {
+            background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://source.unsplash.com/random/1600x900?city');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Exemplo 4: Gradiente Radial */
+        .bg-gradient-radial {
+            background: radial-gradient(circle, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+            text-shadow: none;
+        }
+        
+        /* Exemplo 5: Efeito Parallax */
+        .bg-parallax {
+            background-image: url('https://source.unsplash.com/random/1600x900?architecture');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            height: 500px;
+        }
+        
+        /* Exemplo 6: Padrão de Grid */
+        .bg-pattern {
+            background-color: #f5f5f5;
+            background-image: 
+                linear-gradient(#e66465 1px, transparent 1px),
+                linear-gradient(to right, #e66465 1px, #f5f5f5 1px);
+            background-size: 20px 20px;
+            color: #333;
+            text-shadow: none;
+        }
+        
+        /* Exemplo 7: Múltiplas Imagens */
+        .bg-multiple-images {
+            background-image: 
+                url('https://via.placeholder.com/200x200/ff0000/ffffff?text=1'),
+                url('https://via.placeholder.com/200x200/00ff00/ffffff?text=2'),
+                url('https://via.placeholder.com/200x200/0000ff/ffffff?text=3');
+            background-position: 
+                left top,
+                center center,
+                right bottom;
+            background-repeat: no-repeat;
+            background-size: 100px 100px;
+            background-color: #f0f0f0;
+            color: #333;
+            text-shadow: none;
+        }
+        
+        /* Exemplo 8: Gradiente Animado */
+        .bg-animated-gradient {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Exemplo 9: Textura Personalizada */
+        .bg-texture {
+            background-color: #8BC6EC;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.2) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(255,255,255,0.2) 0%, transparent 20%);
+        }
+        
+        /* Exemplo 10: Efeito Blur */
+        .bg-blur {
+            background-color: #333;
+        }
+        
+        .bg-blur-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://source.unsplash.com/random/1600x900?abstract');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exemplos de Background CSS</h1>
+        
+        <!-- Exemplo 1: Background com Imagem -->
+        <div class="example bg-image">
+            <div class="example-content">
+                <p>Background com Imagem</p>
+            </div>
+            <div class="code">background-image: url('imagem.jpg');<br>background-size: cover;<br>background-position: center;</div>
+        </div>
+        
+        <!-- Exemplo 2: Background com Gradiente Linear -->
+        <div class="example bg-gradient-linear">
+            <div class="example-content">
+                <p>Gradiente Linear</p>
+            </div>
+            <div class="code">background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</div>
+        </div>
+        
+        <!-- Exemplo 3: Imagem com Overlay -->
+        <div class="example bg-image-overlay">
+            <div class="example-content">
+                <p>Imagem com Overlay</p>
+            </div>
+            <div class="code">background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),<br>url('imagem.jpg');</div>
+        </div>
+        
+        <!-- Exemplo 4: Gradiente Radial -->
+        <div class="example bg-gradient-radial">
+            <div class="example-content">
+                <p>Gradiente Radial</p>
+            </div>
+            <div class="code">background: radial-gradient(circle, #ff9a9e 0%, #fad0c4 100%);</div>
+        </div>
+        
+        <!-- Exemplo 5: Efeito Parallax -->
+        <div class="example bg-parallax">
+            <div class="example-content">
+                <p>Efeito Parallax</p>
+            </div>
+            <div class="code">background-attachment: fixed;<br>background-position: center;<br>background-size: cover;</div>
+        </div>
+        
+        <!-- Exemplo 6: Padrão de Grid -->
+        <div class="example bg-pattern">
+            <div class="example-content">
+                <p>Padrão de Grid</p>
+            </div>
+            <div class="code">background-image: linear-gradient(#e66465 1px, transparent 1px),<br>linear-gradient(to right, #e66465 1px, #f5f5f5 1px);<br>background-size: 20px 20px;</div>
+        </div>
+        
+        <!-- Exemplo 7: Múltiplas Imagens -->
+        <div class="example bg-multiple-images">
+            <div class="example-content">
+                <p>Múltiplas Imagens</p>
+            </div>
+            <div class="code">background-image: url('img1.png'), url('img2.png'), url('img3.png');<br>background-position: left top, center center, right bottom;<br>background-size: 100px 100px;</div>
+        </div>
+        
+        <!-- Exemplo 8: Gradiente Animado -->
+        <div class="example bg-animated-gradient">
+            <div class="example-content">
+                <p>Gradiente Animado</p>
+            </div>
+            <div class="code">background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);<br>background-size: 400% 400%;<br>animation: gradient 15s ease infinite;</div>
+        </div>
+        
+        <!-- Exemplo 9: Textura Personalizada -->
+        <div class="example bg-texture">
+            <div class="example-content">
+                <p>Textura Personalizada</p>
+            </div>
+            <div class="code">background-image: radial-gradient(circle at 10% 20%,<br>rgba(255,255,255,0.2) 0%, transparent 20%),<br>radial-gradient(circle at 90% 80%,<br>rgba(255,255,255,0.2) 0%, transparent 20%);</div>
+        </div>
+        
+        <!-- Exemplo 10: Efeito Blur -->
+        <div class="example bg-blur">
+            <div class="bg-blur-effect"></div>
+            <div class="example-content">
+                <p>Efeito Blur no Background</p>
+            </div>
+            <div class="code">filter: blur(8px);<br>(aplicado a um elemento pseudo-background)</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de CSS - Cores</title>
+    <style>
+        /* 
+         * ESTILOS GERAIS 
+         */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333; /* Cor de texto padrão */
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        /* 
+         * MÉTODOS DE DEFINIÇÃO DE CORES 
+         */
+
+        /* 1. CORES PRÉ-DEFINIDAS */
+        #pre-definidas {
+            color: darkblue; /* Cor do texto usando nome pré-definido */
+            background-color: lightcyan; /* Fundo com cor pré-definida */
+            border-color: coral; /* Borda com cor pré-definida */
+        }
+        /*
+        Vantagens: Simples e fácil de lembrar (ex: red, blue, green)
+        Desvantagens: Limitação de opções (cerca de 140 cores disponíveis)
+        */
+
+        /* 2. PALAVRA-CHAVE CURRENTCOLOR */
+        #current-color {
+            color: #8a2be2; /* Roxo (blueviolet) */
+            border: 3px solid currentcolor; /* Borda herda a cor do texto */
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+        /*
+        currentcolor refere-se ao valor atual da propriedade color do elemento
+        Útil para manter consistência em várias propriedades
+        */
+
+        /* 3. HEXADECIMAL */
+        #hex {
+            color: #ff4500; /* Laranja (orangered) */
+            background-color: #e6e6fa; /* Lavanda */
+        }
+        /*
+        Formato: #RRGGBB (RR=vermelho, GG=verde, BB=azul) em hexadecimal (00-FF)
+        Amplamente suportado e compatível com navegadores antigos
+        */
+
+        /* 4. HEXADECIMAL COM TRANSPARÊNCIA */
+        #hex-transparencia {
+            background-color: #9acd3280; /* Amarelo-esverdeado (yellowgreen) com 50% de transparência */
+            color: #000000; /* Preto */
+        }
+        /*
+        Formato: #RRGGBBAA (AA=transparência/alpha)
+        Valores de AA: 00 (transparente) até FF (opaco)
+        */
+
+        /* 5. RGB (RED, GREEN, BLUE) */
+        #rgb {
+            color: rgb(255, 69, 0); /* Vermelho-alaranjado */
+            background-color: rgb(144, 238, 144); /* Verde claro (lightgreen) */
+        }
+        /*
+        Formato: rgb(red, green, blue) com valores de 0 a 255
+        Mais intuitivo que hexadecimal para ajustes manuais
+        */
+
+        /* 6. RGBA (RGB COM TRANSPARÊNCIA) */
+        #rgba {
+            background-color: rgba(138, 43, 226, 0.3); /* Blueviolet com 30% de transparência */
+            color: rgb(0, 0, 0); /* Preto */
+        }
+        /*
+        Formato: rgba(red, green, blue, alpha) com alpha de 0 (transparente) a 1 (opaco)
+        Ideal para efeitos de sobreposição e transparência
+        */
+
+        /* 7. HSL (HUE, SATURATION, LIGHTNESS) */
+        #hsl {
+            color: hsl(16, 100%, 50%); /* Laranja similar ao rgb(255, 69, 0) */
+            background-color: hsl(120, 73%, 75%); /* Verde pastel */
+        }
+        /*
+        Formato: hsl(hue, saturation, lightness)
+        - Hue: ângulo na roda de cores (0-360)
+        - Saturation: porcentagem (0% cinza, 100% cor total)
+        - Lightness: porcentagem (0% preto, 100% branco)
+        Mais intuitivo para ajustes de matiz e tonalidades
+        */
+
+        /* 8. HSLA (HSL COM TRANSPARÊNCIA) */
+        #hsla {
+            color: hsla(210, 100%, 50%, 0.7); /* Azul com 70% de opacidade */
+            background-color: hsla(60, 100%, 50%, 0.2); /* Amarelo com 20% de opacidade */
+        }
+        /*
+        Formato: hsla(hue, saturation, lightness, alpha)
+        Combina a intuitividade do HSL com controle de transparência
+        */
+    </style>
+</head>
+<body>
+    <h1>Cores no CSS</h1>
+    <p>Existem várias formas de definirmos cores utilizando o CSS. Elas são:</p>
+    
+    <ul>
+        <li id="pre-definidas">Cores pré-definidas</li>
+        <li id="current-color">Palavra-chave "currentcolor"</li>
+        <li id="hex">Hexadecimal</li>
+        <li id="hex-transparencia">Hexadecimal com transparência</li>
+        <li id="rgb">RGB</li>
+        <li id="rgba">RGBA</li>
+        <li id="hsl">HSL</li>
+        <li id="hsla">HSLA</li>
+    </ul>
+
+    <div style="margin-top: 30px; padding: 15px; background-color: #f8f9fa; border-radius: 5px;">
+        <h3>Dicas:</h3>
+        <ul style="list-style-type: disc; padding-left: 20px;">
+            <li>Passe o mouse sobre os itens para ver detalhes no código CSS</li>
+            <li>Experimente alterar os valores no código para ver diferentes resultados</li>
+            <li>Use ferramentas como o Color Picker do navegador para ajudar na seleção</li>
+        </ul>
+    </div>
+</body>
+</html> 

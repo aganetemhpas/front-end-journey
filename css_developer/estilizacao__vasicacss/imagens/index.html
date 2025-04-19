@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstração de object-fit e object-position com Charmander</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        h1, h2 {
+            color: #2c3e50;
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FF5722; /* Laranja do Charmander */
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .example {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .example:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-container {
+            width: 100%;
+            height: 200px;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+            background: linear-gradient(45deg, #FFEB3B 25%, #FFC107 25%, #FFC107 50%, #FFEB3B 50%, #FFEB3B 75%, #FFC107 75%);
+            background-size: 20px 20px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .content {
+            padding: 15px;
+        }
+        
+        .property {
+            font-weight: bold;
+            color: #FF5722; /* Laranja do Charmander */
+            margin-bottom: 5px;
+        }
+        
+        .value {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 0.95em;
+            color: #555;
+        }
+        
+        .comparison {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .note {
+            background-color: #FFF3E0; /* Fundo laranja claro */
+            padding: 15px;
+            border-left: 4px solid #FF5722;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        /* Cores temáticas do Pokémon */
+        .fill { color: #FF5722; } /* Laranja do Charmander */
+        .position { color: #F44336; } /* Vermelho mais intenso */
+    </style>
+</head>
+<body>
+    <h1>Propriedades <span class="fill">object-fit</span> e <span class="position">object-position</span> com Charmander</h1>
+    
+    <div class="note">
+        <p>Demonstração usando a imagem de Charmander para mostrar como controlar o redimensionamento e posicionamento de elementos.</p>
+        <p><strong>URL da imagem:</strong> <small>https://wiki.otpokemon.com/index.php?title=Charmander</small></p>
+    </div>
+    
+    <h2>Propriedade <span class="fill">object-fit</span></h2>
+    <p>Como o Charmander se ajusta ao espaço disponível:</p>
+    
+    <div class="container">
+        <!-- Fill -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: fill;" alt="Charmander fill">
+            </div>
+            <div class="content">
+                <div class="property">object-fit</div>
+                <div class="value">fill</div>
+                <div class="description">
+                    <strong>Padrão</strong>. O Charmander é esticado para preencher todo o espaço, 
+                    podendo ficar distorcido. Não mantém proporções originais.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contain -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: contain;" alt="Charmander contain">
+            </div>
+            <div class="content">
+                <div class="property">object-fit</div>
+                <div class="value">contain</div>
+                <div class="description">
+                    Mantém as proporções do Charmander. Aparece completo, mas pode deixar 
+                    espaços vazios nas laterais ou topo/base.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Cover -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: cover;" alt="Charmander cover">
+            </div>
+            <div class="content">
+                <div class="property">object-fit</div>
+                <div class="value">cover</div>
+                <div class="description">
+                    Mantém proporções e preenche todo o espaço. Partes do Charmander 
+                    podem ser cortadas para preencher o contêiner.
+                </div>
+            </div>
+        </div>
+        
+        <!-- None -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: none;" alt="Charmander none">
+            </div>
+            <div class="content">
+                <div class="property">object-fit</div>
+                <div class="value">none</div>
+                <div class="description">
+                    Mostra o Charmander em seu tamanho original. Se for maior que o contêiner, 
+                    será cortado; se for menor, mostrará com seu tamanho real.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Propriedade <span class="position">object-position</span></h2>
+    <p>Controla qual parte do Charmander fica visível quando cortado:</p>
+    
+    <div class="container">
+        <!-- Center -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: none; object-position: center;" alt="Charmander center">
+            </div>
+            <div class="content">
+                <div class="property">object-position</div>
+                <div class="value">center</div>
+                <div class="description">
+                    <strong>Padrão</strong>. Centraliza o Charmander no contêiner. 
+                    Mostra a parte central da imagem quando cortado.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Top Left -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: none; object-position: left top;" alt="Charmander top left">
+            </div>
+            <div class="content">
+                <div class="property">object-position</div>
+                <div class="value">left top</div>
+                <div class="description">
+                    Alinha o Charmander no canto superior esquerdo. Mostra a cabeça e parte 
+                    superior do corpo quando cortado.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Right -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: none; object-position: right bottom;" alt="Charmander bottom right">
+            </div>
+            <div class="content">
+                <div class="property">object-position</div>
+                <div class="value">right bottom</div>
+                <div class="description">
+                    Alinha o Charmander no canto inferior direito. Mostra a cauda e parte 
+                    inferior do corpo quando cortado.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Foco na chama -->
+        <div class="example">
+            <div class="image-container">
+                <img src="../assets/Img-charmander.jpg" style="object-fit: none; object-position: 80% 70%;" alt="Charmander foco na chama">
+            </div>
+            <div class="content">
+                <div class="property">object-position</div>
+                <div class="value">80% 70%</div>
+                <div class="description">
+                    Posiciona para destacar a chama da cauda do Charmander. 
+                    Exemplo de posicionamento personalizado.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="comparison">
+        <h2>Diferenças Práticas</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+            <div>
+                <h3 style="color: #FF5722;">object-fit</h3>
+                <ul>
+                    <li>Controla o <strong>redimensionamento</strong> da imagem</li>
+                    <li>Define se mantém ou não as <strong>proporções</strong></li>
+                    <li>Decide se <strong>preenche</strong> ou <strong>corta</strong> a imagem</li>
+                    <li>Útil para criar <strong>layouts consistentes</strong></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color: #F44336;">object-position</h3>
+                <ul>
+                    <li>Controla o <strong>posicionamento</strong> dentro do espaço</li>
+                    <li>Define <strong>qual parte</strong> da imagem fica visível</li>
+                    <li>Trabalha em conjunto com <code>object-fit</code></li>
+                    <li>Essencial para <strong>enquadramento preciso</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="note">
+        <h3>Exemplo Prático: Thumbnails de Pokémons</h3>
+        <p>Uso combinado para criar uma grade de thumbnails uniformes:</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 15px; margin-top: 20px;">
+            <div style="height: 120px; overflow: hidden; border: 2px solid #FFC107; border-radius: 8px;">
+                <img src="../assets/Img-charmander.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: top;" alt="Charmander thumbnail" title="Charmander">
+            </div>
+            <div style="height: 120px; overflow: hidden; border: 2px solid #FFC107; border-radius: 8px;">
+                <img src="../assets/Img-charmander.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: 30% 20%;" alt="Charmander thumbnail 2" title="Close da cabeça">
+            </div>
+            <div style="height: 120px; overflow: hidden; border: 2px solid #FFC107; border-radius: 8px;">
+                <img src="../assets/Img-charmander.jpg" style="width: 100%; height: 100%; object-fit: cover; object-position: bottom;" alt="Charmander thumbnail 3" title="Foco na cauda">
+            </div>
+        </div>
+        
+        <div style="margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 4px; font-family: monospace;">
+            .pokemon-thumb {<br>
+            &nbsp;&nbsp;width: 120px;<br>
+            &nbsp;&nbsp;height: 120px;<br>
+            &nbsp;&nbsp;object-fit: cover;<br>
+            &nbsp;&nbsp;object-position: top center;<br>
+            &nbsp;&nbsp;border: 2px solid #FFC107;<br>
+            &nbsp;&nbsp;border-radius: 8px;<br>
+            }
+        </div>
+    </div>
+</body>
+</html>
