@@ -16,6 +16,6 @@ router.get('/contato', (req, res) => {
 
 app.use(router);
 
-app.listen(3333, () => {
+app.listen(port.env.PORT || 3333, () => {
   console.log('Servidor rodando na porta 3333');
 });
